@@ -75,11 +75,12 @@ test:
 #
 # You can use this database configuration with:
 #
-production:
-  url: <%= ENV['DATABASE_URL'] %>
-#
 #production:
-#  <<: *default
-#  database: dbe7euv3qq7lpf
-#  username: vvnjtymyyrswns
-#  password: <%= ENV['TEST-APP_DATABASE_PASSWORD'] %>
+#  url: <%= ENV['DATABASE_URL'] %>
+#
+production:
+  <<: *default
+  host: ec2-54-217-231-152.eu-west-1.compute.amazonaws.com
+  database: dbe7euv3qq7lpf
+  username: vvnjtymyyrswns
+  password: <%= ENV['TEST-APP_DATABASE_PASSWORD'] %>
